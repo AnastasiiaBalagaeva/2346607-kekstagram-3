@@ -6,20 +6,19 @@ function getRandomNumber (min, max) {
 }
 
 
-  function getPhotoInfo() {
-    let photos = [];
-    for (let i = 1; i <= 25; i++) {
-
-      let info = {
+function getPhotoInfo() {
+  const photos = [];
+  for (let i = 1; i <= 25; i++) {
+    const info = {
       id: i,
-      url: 'photos/${i}.jpg',
+      url: `photos/${i}.jpg`,
       description: 'stunning',
       likes: getRandomNumber(15, 200),
       comments: getRandomNumber(0, 200),
-      }
-      photos.push(info);
-    }
-    return photos;
+    };
+    photos.push(info);
+  }
+  return photos;
 }
 getPhotoInfo();
 
