@@ -3,9 +3,22 @@ function getRandomNumber (min, max) {
     return -1;
   }
   return (Math.floor(Math.random() * (max - min + 1)) + min);
-  }
-
-
-function checkStringLength(str, maxLength) {
-  return str.length <= maxLength;
 }
+
+
+function getPhotoInfo() {
+  const photos = [];
+  for (let i = 1; i <= 25; i++) {
+    const info = {
+      id: i,
+      url: `photos/${i}.jpg`,
+      description: 'stunning',
+      likes: getRandomNumber(15, 200),
+      comments: getRandomNumber(0, 200),
+    };
+    photos.push(info);
+  }
+  return photos;
+}
+getPhotoInfo();
+
