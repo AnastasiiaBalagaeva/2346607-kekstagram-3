@@ -1,1 +1,1 @@
-let object
+let object {};
