@@ -1,1 +1,7 @@
-let object {};
+let object {
+  id:
+  url:
+  description:
+  likes:
+  comments:
+};
