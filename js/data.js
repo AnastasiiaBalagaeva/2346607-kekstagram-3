@@ -1,6 +1,6 @@
 import {getRandomNumber} from './util.js';
 
-function getPhotoInfo() {
+function generatePhoto() {
   const photos = [];
   for (let i = 1; i <= 25; i++) {
     const info = {
@@ -14,6 +14,6 @@ function getPhotoInfo() {
   }
   return photos;
 }
-getPhotoInfo();
+generatePhoto();
 
-export {getPhotoInfo};
+export {generatePhoto};
