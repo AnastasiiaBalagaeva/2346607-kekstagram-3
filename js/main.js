@@ -1,4 +1,5 @@
 import './data.js';
 import './util.js';
 import '.thumbnails.js';
-//part2
+import './bigPicture.js';
+import './form.js';
