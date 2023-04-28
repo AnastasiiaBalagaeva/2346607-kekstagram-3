@@ -26,5 +26,5 @@ function validateComment(comment) {
 pristine.addValidator(
   form.querySelector('.text__description'),
   validateComment,
-  `Комментарий дложен быть от ${textField.minLen} до ${textField.maxLen} символов.`
+  `Комментарий должен быть от ${textField.minLen} до ${textField.maxLen} символов.`
 );
