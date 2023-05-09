@@ -1,7 +1,8 @@
 import {generatePhoto} from './data';
 
-const photoTemplate = document.querySelector('#picture').content;
+const photoTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const pictures = document.querySelector('.pictures');
+const documentFragment = document.createDocumentFragment();
 
 function renderThumbnail() {
   const photos = generatePhoto();
@@ -10,9 +11,9 @@ function renderThumbnail() {
     photoHolder.querySelector('.picture__img').src = url;
     photoHolder.querySelector('.picture__likes').textContent = likes;
     photoHolder.querySelector('.picture__comments').textContent = comments.length;
-    pictures.appendChild(photoHolder);
+    documentFragment.appendChild(photoHolder);
   });
-  pictures.appendChild(pictures);
+  pictures.appendChild(documentFragment);
 }
 
-export {renderThumbnail};
+export { renderThumbnail };

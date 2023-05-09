@@ -1,7 +1,7 @@
 import './data.js';
 import './util.js';
 import '.thumbnails.js';
-import './big-picture.js';
-import './form.js';
+import './form-controller.js';
+import './validator.js';
 import './scale.js';
 import './effects.js';
