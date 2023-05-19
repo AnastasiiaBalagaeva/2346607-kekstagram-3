@@ -1,12 +1,19 @@
-const BACKEND_URL = 'https://27.javascript.pages.academy/kekstagram-simple/data';
+import {generateRandomNumber} from './utils.js';
 
-function getPhotos(onSuccess, onError) {
-  fetch(BACKEND_URL)
-    .then((response) => response.json())
-    .then(onSuccess)
-    .catch(onError);
+function generateData() {
+  const photos = new Array();
+
+  for (let i = 1; i <= 25; i++) {
+    photos.push({
+      id: i,
+      url: `photos/${i}.jpg`,
+      description: `Photo number ${i}`,
+      likes: generateRandomNumber(15, 200),
+      comments: generateRandomNumber(0, 200),
+    });
+  }
+
+  return photos;
 }
 
-export {
-  getPhotos
-};
+export {generateData};
